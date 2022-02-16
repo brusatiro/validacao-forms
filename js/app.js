@@ -5,7 +5,7 @@ import {
 const inputs = document.querySelectorAll('input')
 
 inputs.forEach(input => {
-    if (input.dataset.tipo === 'preco') {
+    if (input.dataset.tipo == 'preco') {
         SimpleMaskMoney.setMask(input, {
             prefix: 'R$ ',
             fixed: true,
@@ -15,6 +15,7 @@ inputs.forEach(input => {
             cursor: 'end'
         })
     }
+
     input.addEventListener('blur', (evento) => {
         valida(evento.target)
     })
